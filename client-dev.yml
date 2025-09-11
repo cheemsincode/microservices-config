@@ -5,13 +5,23 @@ build:
   type: "Git-Development-Build"
 
 spring:
+  
+  # RabbitMQ Configuration
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
-    password: guest 
+    password: guest
+    virtual-host: /
 management:
-  enpoints:
+  endpoints:
     web:
       exposure:
         include: "*"
+  endpoint:
+    health:
+      show-details: always
+    refresh:
+      enabled: true
+    bus-refresh:
+      enabled: true

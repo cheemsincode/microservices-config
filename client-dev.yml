@@ -8,20 +8,20 @@ spring:
   
   # RabbitMQ Configuration
   rabbitmq:
-    host: localhost
+    host: "localhost"
     port: 5672
-    username: guest
-    password: guest
-    virtual-host: /
+    username: "guest"
+    password: "guest"
+    # virtual-host: /
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-  endpoint:
-    health:
-      show-details: always
-    refresh:
-      enabled: true
-    bus-refresh:
-      enabled: true
+  # endpoint:
+  #   health:
+  #     show-details: always
+  #   refresh:
+  #     enabled: true
+  #   bus-refresh:
+  #     enabled: true
